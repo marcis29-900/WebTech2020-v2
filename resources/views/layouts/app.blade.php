@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a style="font-size: 200%;" class="navbar-brand" href="{{ url('/') }}">
                     S_VHS
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -49,13 +49,16 @@
                                 </li>
                             @endif
                         @else
-                                <li class="nav-item">
-                                    <a href="#">@lang('home.home_menu')</a>
-                                    <a href="#">@lang('home.tape_menu')</a>
-                                    <a href="#">@lang('home.snippet_menu')</a>
-                                    <a href="#">@lang('home.about_menu')</a>
-                                    <a href="#">@lang('home.download_menu')</a>
+                            <div style="font-size: 120%;">
+                                <li style="margin-top: 9px; margin-right: 140px;">
+                                    <a style="margin-right: 20px;" href="http://127.0.0.1:8000/home">@lang('home.home_menu')</a>
+                                    <a style="margin-right: 20px;" href="http://127.0.0.1:8000/tapes">@lang('home.tape_menu')</a>
+                                    <a style="margin-right: 20px;" href="http://127.0.0.1:8000/snippets">@lang('home.snippet_menu')</a>
+                                    <a style="margin-right: 20px;" href="http://127.0.0.1:8000/about">@lang('home.about_menu')</a>
+                                    <a style="margin-right: 20px;" href="http://127.0.0.1:8000/downloads">@lang('home.download_menu')</a>
                                 </li>
+                            </div>
+
 
                             <li class="nav-item">
                                 <a class="nav-link" href="locale/en">en</a>

@@ -25,3 +25,7 @@ Route::get('locale/{locale}', function ($locale){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tapes', 'tapesController@index')->name('tapes');
+Route::get('/snippets', 'snippetsController@index')->name('snippets');
+Route::get('/about', 'aboutController@index')->name('about');
+Route::get('/downloads', 'downloadsController@index')->name('downloads');

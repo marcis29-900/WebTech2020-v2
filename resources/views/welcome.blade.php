@@ -42,14 +42,21 @@
 
             .content {
                 text-align: center;
-            }
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 300px;
+                color: white;
+                opacity: 70%;
+              }
 
             .title {
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
+                opacity: 70%;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -57,10 +64,26 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .links > a:hover {
+              color: red;
+              opacity: 100%;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .m-b-md:hover {
+              color: red;
+            }
+            #vid {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+
+
         </style>
 
 
@@ -75,31 +98,27 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+
                         @endif
                     @endauth
                 </div>
             @endif
-
+            <video autoplay muted loop id="vid">
+              <source src="img/vhs.mp4" type="video/mp4">
+            </video>
             <div class="content">
                 <div class="title m-b-md">
                     S_VHS
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a style="font-size: 200%;" href="http://127.0.0.1:8000/home">-Enter-</a>
+
                 </div>
             </div>
         </div>
